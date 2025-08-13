@@ -1,0 +1,102 @@
+//Suyashi Tiwari
+//24070123115
+#include<iostream>
+using namespace std;
+
+int main(){
+    int matrixA[3][3], matrixB[3][3], matrixC[3][3];
+
+    // Input for Matrix A
+    cout << "Enter elements for Matrix A:\n";
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << "Enter element (" << i << "," << j << "): ";
+            cin >> matrixA[i][j];
+        }
+    }
+
+    // Display Matrix A
+    cout << "\nMatrix A:\n";
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << matrixA[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    // Input for Matrix B
+    cout << "\nEnter elements for Matrix B:\n";
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << "Enter element (" << i << "," << j << "): ";
+            cin >> matrixB[i][j];
+        }
+    }
+
+    // Display Matrix B
+    cout << "\nMatrix B:\n";
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << matrixB[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    // Matrix Addition
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            matrixC[i][j] = matrixA[i][j] + matrixB[i][j];
+        }
+    }
+
+    // Display Result Matrix
+    cout << "\nAddition of Matrix A and Matrix B:\n";
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << matrixC[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+/*Output
+Enter elements for Matrix A:
+Enter element (0,0): 1
+Enter element (0,1): 2
+Enter element (0,2): 3
+Enter element (1,0): 4
+Enter element (1,1): 5
+Enter element (1,2): 6
+Enter element (2,0): 7
+Enter element (2,1): 8
+Enter element (2,2): 9
+
+Matrix A:
+1 2 3 
+4 5 6 
+7 8 9 
+
+Enter elements for Matrix B:
+Enter element (0,0): 9
+Enter element (0,1): 8
+Enter element (0,2): 7
+Enter element (1,0): 6
+Enter element (1,1): 5
+Enter element (1,2): 4
+Enter element (2,0): 3
+Enter element (2,1): 2
+Enter element (2,2): 1
+
+Matrix B:
+9 8 7 
+6 5 4 
+3 2 1 
+
+Addition of Matrix A and Matrix B:
+10 10 10 
+10 10 10 
+10 10 10 
+
+
+=== Code Execution Successful ===*/
