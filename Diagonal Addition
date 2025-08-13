@@ -1,0 +1,56 @@
+//Suyashi Tiwari
+//24070123115
+#include<iostream>
+using namespace std;
+
+int main() {
+    int r, c, i, j;
+    cout<<"Enter matrix dimension: ";
+    cin>>r>>c;
+    int ar[r][c], add=0, sum=0;
+    if(r==c){
+        for(i=0;i<r;i++){
+            for(j=0;j<c;j++){
+                cout<<"Enter element-("<<i<<j<<"): ";
+                cin>>ar[i][j];
+            }
+        }
+        for(i=0;i<r;i++){
+            for(j=0;j<c;j++){
+                if(i==j){
+                    add+=ar[i][j];
+                }
+            }
+        }
+        for(i=0;i<r;i++){
+            for(j=0;j<c;j++){
+                if(i+j==(r-1)){
+                    sum+=ar[i][j];
+                }
+            }
+        }
+        cout<<endl<<"Sum of diagnol-1: "<<add<<endl;
+        cout<<"Sum of diagnol-2: "<<sum<<endl;
+    }
+    else{
+        cout<<"Cannot perform diagnol addition for given dimensions"<<endl;
+    }}
+
+  
+/*Output:
+Enter matrix dimension: 3 3
+Enter element-(00): 1
+Enter element-(01): 2
+Enter element-(02): 3
+Enter element-(10): 4
+Enter element-(11): 5
+Enter element-(12): 6
+Enter element-(20): 7
+Enter element-(21): 8
+Enter element-(22): 9
+
+Sum of diagnol-1: 15
+Sum of diagnol-2: 15
+
+
+=== Code Execution Successful ===*/
