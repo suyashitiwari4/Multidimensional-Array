@@ -1,0 +1,83 @@
+//Suyashi Tiwari
+//24070123115
+#include<iostream>
+using namespace std;
+
+int main(){
+    int A[3][3], B[3][3], C[3][3];
+
+    // Input Matrix A
+    cout << "Enter elements for Matrix A:\n";
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << "A[" << i << "][" << j << "]: ";
+            cin >> A[i][j];
+        }
+    }
+
+    // Input Matrix B
+    cout << "\nEnter elements for Matrix B:\n";
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << "B[" << i << "][" << j << "]: ";
+            cin >> B[i][j];
+        }
+    }
+
+    // Initialize result matrix C to 0
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            C[i][j] = 0;
+        }
+    }
+
+    // Matrix Multiplication
+    for(int i = 0; i < 3; i++){         // Rows of A
+        for(int j = 0; j < 3; j++){     // Columns of B
+            for(int k = 0; k < 3; k++){ // Columns of A / Rows of B
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    // Display Result
+    cout << "\nMultiplication of Matrix A and Matrix B:\n";
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+/*Output:
+Enter elements for Matrix A:
+A[0][0]: 2
+A[0][1]: 1
+A[0][2]: 4
+A[1][0]: 6
+A[1][1]: 12
+A[1][2]: 15
+A[2][0]: 16
+A[2][1]: 3
+A[2][2]: 8
+
+Enter elements for Matrix B:
+B[0][0]: 2
+B[0][1]: 9
+B[0][2]: 8
+B[1][0]: 0
+B[1][1]: 6
+B[1][2]: 4
+B[2][0]: 12
+B[2][1]: 13
+B[2][2]: 7
+
+Multiplication of Matrix A and Matrix B:
+52 76 48 
+192 321 201 
+128 266 196 
+
+
+=== Code Execution Successful ===*/
