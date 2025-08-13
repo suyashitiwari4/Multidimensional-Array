@@ -1,0 +1,51 @@
+//Suyashi Tiwari
+//24070123115
+#include<iostream>
+using namespace std;
+
+int main() {
+    int i, j, r1, c1, r2, c2;
+    cout<<"Enter number of rows & column: ";
+    cin>>r1>>c1;
+    int ar[r1][c1];
+    for(i=0;i<r1;i++){
+        for(j=0;j<c1;j++){
+            cout<<"Enter element-"<<i+1<<j+1<<":";
+            cin>>ar[i][j];
+        }
+    }
+    r2=c1;
+    c2=r1;
+    int t[r2][c2];
+    cout<<endl<<"Transposed Matrix:\n";
+    for(i=0;i<r2;i++){
+        for(j=0;j<c2;j++){
+            t[i][j]=ar[j][i];
+            cout<<t[i][j]<<"  ";
+        }
+        cout<<endl;
+    }
+    return 0;
+   
+    }
+/*Output:
+Enter number of rows & column: 3 3
+Enter element-11:11
+Enter element-12:32
+Enter element-13:45
+Enter element-21:98
+Enter element-22:54
+Enter element-23:34
+Enter element-31:12
+Enter element-32:78
+Enter element-33:98
+
+Transposed Matrix:
+11  98  12  
+32  54  78  
+45  34  98  
+
+
+=== Code Execution Successful ===*/
+
+  
